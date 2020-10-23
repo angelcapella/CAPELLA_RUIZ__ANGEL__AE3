@@ -8,6 +8,54 @@
     <title>inicio</title>
 </head>
 <body>
+    <nav class="menu">
+        <ul>
+            <button class="prev" > <- Prev</button>
+            <h1 class="titulo">Explicación</h1>
+            <button class="next" onclick="ocultar()">Next -></button>
+        </ul>
+    </nav> 
+
+    <div id="text">
+
+        <h1>titulo</h1>
+
+        <p>Paso inicial con la descripción de los pasos de la aplicación</p>
+
+        <p>Formulario de solicitud de datos:
+        <ul> a. Nombre y apellidos: alfanumérico. Requerido.</ul>   
+        <ul>b. Fecha de nacimiento: formato fecha. Requerido</ul>    
+        <ul>c. Dirección: alfanumérico. Opcional</ul>    
+        <ul>d. Código postal: numérico. Requerido. 5 dígitos.</ul>   
+        <ul>e. Provincia: Seleccionable (Valencia, Alicante y Castellón). Requerido.</ul>    
+        <ul>f. Municipio: Alfanumérico. Mayúsculas automáticas. Requerido</ul>    </p>
+
+        <p>Confirmación de datos: se mostrarán los datos introducidos de manera que el usuario pueda aceptarlos o volver al paso de modificación de los mismos. </p>
+        
+        <p>Mensaje de agradecimiento: pantalla en la que mostraremos un mensaje de confirmación de envío, agradeciendo su colaboración.</p>
     
+    </div>
+
+    <div id="formulario">
+        <h1>FORMULARIO</h1>
+
+        <form class="form" action="">
+           Nombre y Apellidos <input type="text">
+           Fecha de Nacimiento <input type="date" name="" id="">
+           Dirección <input type="text">
+           Código postal <input type="number">
+           Provincia :<select >
+
+                        <option>Valencia</option>
+            
+                        <option>Alicante</option>
+            
+                        <option>Castellón</option>
+            
+                    </select>
+            Municipio <input type="text">
+            <button type="submit">ENVIAR</button>
+        </form>
+    </div>
 </body>
 </html>

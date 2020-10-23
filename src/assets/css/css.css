@@ -1,0 +1,42 @@
+.prev{
+    display: flex;
+    
+    font-size: 22px;
+    justify-content:space-between;
+    
+    
+}
+.next{
+    display: flex;
+   
+    font-size: 22px;
+    justify-content:space-between;
+    
+}
+.menu{
+    background-color: gray;
+}
+.titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-style: sans-serif;
+    
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-style: sans-serif;
+}
+#formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-style: sans-serif;
+}
