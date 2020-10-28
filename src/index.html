@@ -10,20 +10,20 @@
 <body>
     <nav class="menu">
         <ul>
-            <button class="prev" > <- Prev</button>
+            <button class="prev" id="botones" onclick="volver()"> <- Prev</button>
             <h1 class="titulo">Explicación</h1>
-            <button class="next" onclick="ocultar()">Next -></button>
+            <button class="next" id="botones" onclick="ocultar()">Next -></button>
         </ul>
     </nav> 
 
     <div id="text">
 
-        <h1>titulo</h1>
+        <h1>Titulo</h1>
 
         <p>Paso inicial con la descripción de los pasos de la aplicación</p>
 
         <p>Formulario de solicitud de datos:
-        <ul> a. Nombre y apellidos: alfanumérico. Requerido.</ul>   
+        <ul>a. Nombre y apellidos: alfanumérico. Requerido.</ul>   
         <ul>b. Fecha de nacimiento: formato fecha. Requerido</ul>    
         <ul>c. Dirección: alfanumérico. Opcional</ul>    
         <ul>d. Código postal: numérico. Requerido. 5 dígitos.</ul>   
@@ -39,12 +39,18 @@
     <div id="formulario">
         <h1>FORMULARIO</h1>
 
-        <form class="form" action="">
-           Nombre y Apellidos <input type="text">
-           Fecha de Nacimiento <input type="date" name="" id="">
-           Dirección <input type="text">
-           Código postal <input type="number">
-           Provincia :<select >
+        <form class="form" >
+
+            <label for="nombre">Nombre y Apellidos </label>
+           <input type="text" id="nombre">
+           <label for="fecha">Fecha de Nacimiento </label>
+           <input type="date" name="" id="fecha">
+           <label for="direccion">Dirección </label>
+           <input type="text" id="dirrecion">
+           <label for="codigo">Código postal </label>
+           <input type="number" id="codigo">
+           <label for="provincia">Provincia </label>
+           <select id="provincia">
 
                         <option>Valencia</option>
             
@@ -53,9 +59,29 @@
                         <option>Castellón</option>
             
                     </select>
-            Municipio <input type="text">
-            <button type="submit">ENVIAR</button>
+            <label for="municipio">Municipio </label>
+            <input type="text" id="municipio">
+            <button type="submit" id="botones" class="input">ENVIAR</button>
         </form>
+    </div>
+
+    <div id="confirmacion">
+        <h1>Paso de Confirmación</h1>
+        
+        <button class="prev" id="botones">Paso Anterior</button>
+        
+        <button class="next" id="botones" onclick="ocultar()">Aceptar</button>
+
+
+    </div>
+
+    <div id="mensaje" >
+    <h1>Mensaje de Agradecimiento</h1>
+
+        <p>Muchas gracias por su ayuda en nuestra web .
+            Espero que les haya servido de ayuda .
+        </p>
+
     </div>
 </body>
 </html>
