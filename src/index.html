@@ -10,9 +10,9 @@
 <body>
     <nav class="menu">
         <ul>
-            <button class="prev" id="botones" onclick="volver()"> <- Prev</button>
+            <button class="prev" id="botones" onclick="volver()"> Atras</button>
             <h1 class="titulo">Explicación</h1>
-            <button class="next" id="botones" onclick="ocultar()">Next -></button>
+            <button class="next" id="botones" onclick="ocultar()">Continuar</button>
         </ul>
     </nav> 
 
@@ -33,7 +33,11 @@
         <p>Confirmación de datos: se mostrarán los datos introducidos de manera que el usuario pueda aceptarlos o volver al paso de modificación de los mismos. </p>
         
         <p>Mensaje de agradecimiento: pantalla en la que mostraremos un mensaje de confirmación de envío, agradeciendo su colaboración.</p>
-    
+        
+        <label for="url">Pon una URL</label>
+        <input type="url" id="url">
+        <button type="button" id="botones"><a get="url()">enviar</a></button>
+        
     </div>
 
     <div id="formulario">
@@ -42,15 +46,15 @@
         <form class="form" >
 
             <label for="nombre">Nombre y Apellidos </label>
-           <input type="text" id="nombre">
+           <input type="text" id="nombre" required="required">
            <label for="fecha">Fecha de Nacimiento </label>
-           <input type="date" name="" id="fecha">
+           <input type="date" name="" id="fecha" required="required">
            <label for="direccion">Dirección </label>
-           <input type="text" id="dirrecion">
+           <input type="text" id="dirrecion" required="required">
            <label for="codigo">Código postal </label>
-           <input type="number" id="codigo">
+           <input type="number" id="codigo" required="required">
            <label for="provincia">Provincia </label>
-           <select id="provincia">
+           <select id="provincia" required="required">
 
                         <option>Valencia</option>
             
@@ -60,8 +64,8 @@
             
                     </select>
             <label for="municipio">Municipio </label>
-            <input type="text" id="municipio">
-            <button type="submit" id="botones" class="input">ENVIAR</button>
+            <input type="text" id="municipio" required="required">
+            <button type="submit" id="botones" class="input" >ENVIAR</button>
         </form>
     </div>
 
@@ -78,7 +82,7 @@
     <div id="mensaje" >
     <h1>Mensaje de Agradecimiento</h1>
 
-        <p>Muchas gracias por su ayuda en nuestra web .
+        <p>Muchas gracias por su visita en nuestra web .
             Espero que les haya servido de ayuda .
         </p>
 
