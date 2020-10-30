@@ -5,11 +5,15 @@ const mensaje = document.getElementById('mensaje');
 const url = document.getElementById('url');
 
 
-    function ocultar(){
-        document.getElementById('text').style.visibility= 'hidden';
-        document.getElementById('mensaje').style.visibility= 'hidden';
-        document.getElementById('confirmacion').style.visibility= 'hidden';
-    }
+function ocultar(){
+    document.getElementById('text').style.visibility = 'hidden';
+    document.getElementById('mensaje').style.visibility = 'hidden';
+    document.getElementById('confirmacion').style.visibility = 'hidden';
+}
+
+function volver() {
+ document.getElementById('formulario').style.visibility = 'hidden';   
+}
 
 
 
