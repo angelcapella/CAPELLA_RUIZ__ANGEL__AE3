@@ -5,11 +5,14 @@ const mensaje = document.getElementById('mensaje');
 const url = document.getElementById('url');
 
 
-function ocultar(){
-    document.getElementById('text').style.display = 'none';
-    document.getElementById('mensaje').style.display = 'none';
-    document.getElementById('confirmacion').style.display = 'none';
-}
+    function ocultar(){
+        document.getElementById('text').style.visibility= 'hidden';
+        document.getElementById('mensaje').style.visibility= 'hidden';
+        document.getElementById('confirmacion').style.visibility= 'hidden';
+    }
+
+
+
 
 
 
