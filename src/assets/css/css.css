@@ -13,6 +13,11 @@
 
 .menu{
     background-color: gray;
+    display: block;
+    text-align: center;
+    padding: 16px 18px;
+    overflow: hidden;
+    
 }
 
 .titulo{
@@ -68,9 +73,32 @@
 
 #botones{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     color: blue;
     text-decoration-color: white;
     border-radius: 3px;
+}
+#boton1{
+    
+    float: left;
+    color: blue;
+    text-decoration-color: white;
+    border-radius: 3px;
+}
+#boton2{
+    
+    
+    color: blue;
+    text-decoration-color: white;
+    border-radius: 3px;
+}
+
+.displaynone{
+    display: none;
+}
+
+.requerido:after{
+    content: ' *';
+
 }

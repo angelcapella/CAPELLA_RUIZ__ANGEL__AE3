@@ -8,54 +8,66 @@
     <title>inicio</title>
 </head>
 <body>
-    <nav class="menu">
-        <ul>
+
+
+
+
+    <div id="g1">
+    <nav >
+        <ul class="menu">
+            <button class="prev" id="boton1" > Atras</button>
             <h1 class="titulo">Explicación</h1>
-            <button class="prev" id="botones" onclick="volver()"> Atras</button>
-            <button class="next" id="botones" onclick="ocultar()">Continuar</button>
+            <button style="float: right;" class="next" id="boton2" onclick="siguiente(2)">Continuar</button>
             
         </ul>
     </nav> 
 
-    <div id="text">
+    <div id="text" >
 
         <h1>Titulo</h1>
 
-        <p>Paso inicial con la descripción de los pasos de la aplicación</p>
+        <p>En la primera parte tenemos un breve explicacion de lo que va a ir nuestro projecto donde pondremos una url .</p>
 
-        <p>Formulario de solicitud de datos:
-        <ul>a. Nombre y apellidos: alfanumérico. Requerido.</ul>   
-        <ul>b. Fecha de nacimiento: formato fecha. Requerido</ul>    
-        <ul>c. Dirección: alfanumérico. Opcional</ul>    
-        <ul>d. Código postal: numérico. Requerido. 5 dígitos.</ul>   
-        <ul>e. Provincia: Seleccionable (Valencia, Alicante y Castellón). Requerido.</ul>    
-        <ul>f. Municipio: Alfanumérico. Mayúsculas automáticas. Requerido</ul>    </p>
+        <p>En la segunda parte de la pagina tenemos un formulario donde pondremos nuestros datos .</p>
 
-        <p>Confirmación de datos: se mostrarán los datos introducidos de manera que el usuario pueda aceptarlos o volver al paso de modificación de los mismos. </p>
+        <p>En la tercera parte tenemos un validor donde podremos ver nuestros datos y correguir alguno .</p>
         
-        <p>Mensaje de agradecimiento: pantalla en la que mostraremos un mensaje de confirmación de envío, agradeciendo su colaboración.</p>
+        <p>En la cuarta parte tenemos un mensaje de agradecimiento por haber enviado los datos .</p>
         
         <label for="url">Pon una URL</label>
-        <input type="url" id="url">
-        <button type="button" id="botones"><a get="url()">ENVIAR</a></button>
+        <input type="text" id="urltodo" name="url" step="1"  value=""  size="20">
+        <button type="button" id="enviarurl"><a onclick="enviarurlf()">ENVIAR</a></button>
         
     </div>
+    </div> 
+    
 
-    <div id="formulario">
+
+    <div id="g2" class="displaynone">
+        <nav >
+            <ul class="menu">
+                <button class="prev" id="boton1"onclick="retroceder(2)" > Atras</button>
+                <h1 class="titulo">Explicación</h1>
+                <button style="float: right;" class="next" id="boton2" onclick="siguiente(3)">Continuar</button>
+                
+            </ul>
+        </nav> 
+
+    <div id="formulario" >
         <h1>FORMULARIO</h1>
 
         <form class="form" >
 
             <label for="nombre">Nombre y Apellidos </label>
-           <input type="text" id="nombre" required="required">
+           <input type="text" id="nombre" required="required" class="form">
            <label for="fecha">Fecha de Nacimiento </label>
-           <input type="date" name="" id="fecha" required="required">
+           <input type="date" id="fecha" required="required" class="form">
            <label for="direccion">Dirección </label>
-           <input type="text" id="dirrecion" required="required">
+           <input type="text" id="dirrecion" required="required" class="form">
            <label for="codigo">Código postal </label>
-           <input type="number" id="codigo" required="required">
+           <input type="number" id="codigo" required="required" class="form">
            <label for="provincia">Provincia </label>
-           <select id="provincia" required="required">
+           <select id="provincia" required="required" class="form">
 
                         <option>Valencia</option>
             
@@ -65,20 +77,48 @@
             
                     </select>
             <label for="municipio">Municipio </label>
-            <input type="text" id="municipio" required="required">
-            <button type="submit" id="botones" class="input" >ENVIAR</button>
+            <input type="text" id="municipio" required="required" class="form">
+            <button type="submit" id="botones" class="input" onclick="Coger()">ENVIAR</button>
         </form>
+        
+    
     </div>
+   </div>
+    
 
-    <div id="confirmacion">
+    <div id="g3" class="displaynone">
+        <nav >
+            <ul class="menu">
+                <button class="prev" id="boton1" onclick="retroceder(3)"> Atras</button>
+                <h1 class="titulo">Explicación</h1>
+                <button style="float: right;" class="next" id="boton2" onclick="siguiente(4)">Continuar</button>
+                
+            </ul>
+        </nav> 
+
+    <div id="confirmacion" >
         <h1>Paso de Confirmación</h1>
         
-        <button class="prev" id="botones">Paso Anterior</button>
-        
-        <button class="next" id="botones">Aceptar</button>
+        <div id="pintar">
+
+        </div>
+
+        <button class="prev" id="botones" onclick="retroceder(3)">Paso Anterior</button>
+        <button class="next" id="botones" onclick="siguiente(4)">Aceptar</button>
 
 
     </div>
+    </div>
+
+    <div id="g4" class="displaynone">
+        <nav >
+            <ul class="menu">
+                <button class="prev" id="boton1" onclick="retroceder(4)" > Atras</button>
+                <h1 class="titulo">Explicación</h1>
+                <button style="float: right;" class="next" id="boton2" >Continuar</button>
+                
+            </ul>
+        </nav> 
 
     <div id="mensaje" >
     <h1>Mensaje de Agradecimiento</h1>
@@ -87,6 +127,15 @@
             Muchas gracias por su visita en nuestra web .
             Espero que les haya servido de ayuda .
         </p>
+        <div>
+            <button onclick="terminartodo()" id="botones">Terminar</button>
+        </div>
+    </div>
+
+    <div id="urlalmacen" class="displaynone">
+
+    </div>
+    
 
     </div>
 </body>
