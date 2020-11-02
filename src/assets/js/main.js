@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         arrayGuardar.forEach(element=>{
             html = html + element + '<br>'
         });
-        getElementById('pintar').innerHTML = html;
+        document.getElementById('pintar').innerHTML = html;
     }
 
 
